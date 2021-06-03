@@ -160,7 +160,7 @@ class App extends Component {
                         <tr>
                           <td>
                             <img
-                              src="https://d36urhup7zbd7q.cloudfront.net/107df825-666b-4cc4-aec1-d8158a0cb225/logo.format_png.resize_200x.png#logo"
+                              src="http://gest.mirrorprod.com/wp-content/uploads/2021/06/logo.png"
                               height="61.438356164383556"
                               width="65"
                               style="
