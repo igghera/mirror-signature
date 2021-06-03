@@ -40,7 +40,7 @@ class App extends Component {
         />
       </div>
 
-      <div>
+      {/* <div>
         <label htmlFor="email">Email </label>
         <input
           id="email"
@@ -49,7 +49,7 @@ class App extends Component {
           onChange={this.handleEmailChange}
         />
         @mirror.it
-      </div>
+      </div> */}
 
       <div>
         <label htmlFor="telefono">Telefono </label>
