@@ -472,7 +472,7 @@ class App extends Component {
                                               <img
                                                 width="16"
                                                 height="16"
-                                                src="http://materiale.mirrorprod.com/email/immagini/icons/instagram-icon.png"
+                                                src="http://gest.mirrorprod.com/wp-content/uploads/2021/06/instagram-icon.png"
                                                 style="float: left; border: none"
                                                 border="0"
                                               />
@@ -498,7 +498,7 @@ class App extends Component {
                                               <img
                                                 width="16"
                                                 height="16"
-                                                src="http://materiale.mirrorprod.com/email/immagini/icons/fb-icon.png"
+                                                src="http://gest.mirrorprod.com/wp-content/uploads/2021/06/fb-icon.png"
                                                 style="float: left; border: none"
                                                 border="0"
                                               />
@@ -524,7 +524,7 @@ class App extends Component {
                                               <img
                                                 width="16"
                                                 height="16"
-                                                src="http://materiale.mirrorprod.com/email/immagini/icons/vimeo-icon.png"
+                                                src="http://gest.mirrorprod.com/wp-content/uploads/2021/06/vimeo-icon.png"
                                                 style="float: left; border: none"
                                                 border="0"
                                               />
@@ -550,7 +550,7 @@ class App extends Component {
                                               <img
                                                 width="16"
                                                 height="16"
-                                                src="http://materiale.mirrorprod.com/email/immagini/icons/linkedin-icon.png"
+                                                src="http://gest.mirrorprod.com/wp-content/uploads/2021/06/linkedin-icon.png"
                                                 style="float: left; border: none"
                                                 border="0"
                                               />
