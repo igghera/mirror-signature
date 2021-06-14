@@ -4,17 +4,17 @@ import './App.css';
 
 class App extends Component {
   state = {
-    nome: 'Tommaso Valente',
-    ruolo: 'Co-Founder & Client Director',
-    email: 'tommaso',
-    telefono: '347 74 62 355'
+    nome: 'Andrea Gherardi',
+    ruolo: 'Chief Technical Officer',
+    email: 'andrea.gherardi',
+    telefono: '328 88 76 938'
   };
 
   copy = () => {
     window.getSelection().selectAllChildren(document.querySelector('.Output'));
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
-    alert('Copiato! Ora vai su Gmail');
+    alert('Copiato! Ora vai su Gmail, MA NON USARE CHROME!!!');
   };
 
   step1 = () => (
@@ -36,16 +36,6 @@ class App extends Component {
           type="text"
           value={this.state.ruolo}
           onChange={this.handleRuoloChange}
-        />
-      </div>
-
-      <div>
-        <label htmlFor="email">Email </label>
-        <input
-          id="email"
-          type="text"
-          value={this.state.email}
-          onChange={this.handleEmailChange}
         />
       </div>
 
@@ -99,166 +89,335 @@ class App extends Component {
   };
 
   getFirma = () => ({
-    __html: `<body>
-        <br /> -- <br /><br />
-        <div
-          class="container"
-          style=" position:relative; width:285px; height:auto;"
-        >
-          <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700"
-            rel="stylesheet"
-          />
-          <div
-            class="logo"
-            style=" float:left; cursor:pointer; height:115px; width:70px;"
-          >
-            
-            <a href="http://mirrorprod.com">
-              
-              <img
-                src="http://materiale.mirrorprod.com/email/immagini/logo.png"
-                alt="logo"
-                height="55px"
-                width="58px"
-              />
-            </a>
-          </div>
-          <div
-            class="text"
-            style="height: auto; width: 100; position:absolute; left:70px; width: auto; "
-          >
-            <div style="font-family: 'Montserrat', sans-serif; font-weight:700; line-height:15px; color:#231f20; font-size:16px;">
-              
-              ${this.state.nome}
-            </div>
-            <div
-              class="italic"
-              style="font-family: 'Montserrat', sans-serif; font-weight:400; line-height:15px; color:#231f20; font-size:12px; margin-bottom: 9px;"
-            >
-              
-              ${this.state.ruolo}
-            </div>
-            <div
-              style="font-family: 'Montserrat', sans-serif; ; font-weight:700; line-height:14px; color:#231f20; font-size:10px;"
-            >
-              
-              M:
-              <a
-                href="tel:+39${this.state.telefono}"
-                target="_blank"
-                style="text-decoration:none; line-height:14px; color:#231f20; font-size:10px; font-weight:400;"
-              >
-                +39 ${this.state.telefono}
-              </a>
-            </div>
-            <div
-              style="font-family: 'Montserrat', sans-serif; ; font-weight:700; line-height:14px; color:#231f20; font-size:10px;"
-            >
-              O:
-              <a
-                href="tel:+390559753445"
-                target="_blank"
-                style="text-decoration:none; line-height:14px; color:#231f20; font-size:10px; font-weight:400;"
-              >
-                +39 055 97 53 445
-              </a>
-              <div style="font-family: 'Montserrat', sans-serif;">
-                
-                <a
-                  href="mailto:${this.state.email}@mirrorprod.com"
-                  target="_blank"
-                  style="text-decoration:none; line-height:14px; color:#231f20; font-size:10px;"
-                >
-                  
-                  ${this.state.email}@mirrorprod.com
-                </a>
-              </div>
-              <div style="font-family: 'Montserrat', sans-serif;">
-                
-                <a
-                  href="http://www.mirrorprod.com"
-                  target="_blank"
-                  style="text-decoration:none; line-height:14px; color:#c30081; font-size:10px;"
-                >
-                  
-                  www.mirrorprod.com
-                </a>
-              </div>
-              <div class="logo-social-1" style="margin-top:2px;">
-                <a
-                  href="https://www.instagram.com/mirrorprod"
-                  target="_blank"
-                  title="Mirror Prod. Instagram page"
-                  style="text-decoration:none;"
-                >
-                  <img
-                    src="http://materiale.mirrorprod.com/email/immagini/icons/instagram-icon.png"
-                    alt="instagram icon"
-                    height="17px"
-                    width="17px"
-                    style="margin-top:0px;padding-right:12px;"
-                  />
-                </a>
-                <a
-                  href="https://www.facebook.com/mirrorprod"
-                  target="_blank"
-                  title="Mirror Prod. Facebook page"
-                  target="_blank"
-                  style="text-decoration:none;"
-                >
-                  <img
-                    src="http://materiale.mirrorprod.com/email/immagini/icons/fb-icon.png"
-                    alt="fb-icon"
-                    height="17px"
-                    width="17px"
-                    style="margin-top:0px;padding-right:12px;"
-                  />
-                </a>
-                <a
-                  href="https://www.vimeo.com/mirrorprod"
-                  target="_blank"
-                  title="Mirror Prod. Vimeo page"
-                  style="text-decoration:none; margin-top:0px;"
-                >
-                  
-                  <img
-                    src="http://materiale.mirrorprod.com/email/immagini/icons/vimeo-icon.png"
-                    alt="vimeo-icon"
-                    height="17px"
-                    width="17px"
-                    style="margin-top:0px;padding-right:12px;"
-                  />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/mirror-production/"
-                  target="_blank"
-                  title="Mirror Prod. Linkedin Page"
-                  style="text-decoration:none; margin-top:0px;"
-                >
-                  
-                  <img
-                    src="http://materiale.mirrorprod.com/email/immagini/icons/linkedin-icon.png"
-                    alt="linkedin-icon"
-                    height="17px"
-                    width="17px"
-                    style="margin-top:0px;padding-right:0px;"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-      </body>`
+    __html: `<table style="
+      direction: ltr;
+      border-radius: 0;
+      moz-border-radius: 0;
+      khtml-border-radius: 0;
+      o-border-radius: 0;
+      webkit-border-radius: 0;
+      ms-border-radius: 0;
+    " class="main_html">
+    <tbody>
+      <tr>
+        <td style="padding-bottom: 20px">
+          --
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tbody>
+              <tr>
+                <td style="line-height: 0; height: 16px"></td>
+              </tr>
+            </tbody>
+          </table>
+          <table cellpadding="0" cellspacing="0" class="ws-tpl" style="font-family: Arial; line-height: 1.15; color: #000">
+            <tbody>
+              <tr>
+                <td style="vertical-align: top; padding-right: 14px">
+                  <table cellpadding="0" cellspacing="0" class="ws-tpl-photo" style="width: 65px">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <img src="http://gest.mirrorprod.com/wp-content/uploads/2021/06/logo.png" height="61.438356164383556" width="65" style="
+                              width: 65px;
+                              vertical-align: initial;
+                              border-radius: 0;
+                              moz-border-radius: 0;
+                              khtml-border-radius: 0;
+                              o-border-radius: 0;
+                              webkit-border-radius: 0;
+                              ms-border-radius: 0;
+                              display: block;
+                              height: 61.438356164383556px;
+                            ">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td style="padding-left: 0; vertical-align: top" valign="top">
+                  <table cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td style="line-height: 1; padding-bottom: 8px">
+                          <span class="ws-tpl-name" style="
+                              font-family: Arial;
+                              text-transform: initial;
+                              font-weight: bold;
+                            ">
+                            <span style="
+                                font-size: 15.600000000000001px;
+                                font-weight: bold;
+                              " data-acs="name">
+                              ${this.state.nome}
+                            </span> </span><br>
+                          <span class="ws-tpl-title" style="
+                              font-size: 12px;
+                              letter-spacing: 0px;
+                              font-family: Arial;
+                              text-transform: initial;
+                            " data-acs="title">
+                            ${this.state.ruolo}
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="line-height: 0">
+                          <table cellpadding="0" cellspacing="0">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <table cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                      <tr>
+                                        <td style="
+                                            line-height: 0%;
+                                            padding-bottom: 0px;
+                                          ">
+                                          <table class="ws-tpl-mobile" cellpadding="0" cellspacing="0" style="
+                                              width: 100%;
+                                              line-height: 14px;
+                                              font-size: 12px;
+                                              font-family: Arial;
+                                            ">
+                                            <tbody>
+                                              <tr>
+                                                <td style="
+                                                    color-scheme: light only;
+                                                    font-family: Arial;
+                                                    font-size: 12px;
+                                                  ">
+                                                  <span class="ws-tpl-name" style="
+                                                      font-family: Arial;
+                                                      text-transform: initial;
+                                                      font-weight: bold;
+                                                      font-size: 11px;
+                                                    ">
+                                                    M:
+                                                  </span>
+                                                  <a href="tel:+39${this.state.telefono}" target="_blank" style="
+                                                      color-scheme: light only;
+                                                      text-decoration: none;
+                                                      font-size: 12px;
+                                                      font-family: Arial;
+                                                    ">
+                                                    <span data-acs="mobile" style="
+                                                        line-height: 1.2;
+                                                        color-scheme: light only;
+                                                        color: #212121;
+                                                        font-family: Arial;
+                                                        white-space: nowrap;
+                                                        font-size: 11px;
+                                                      ">
+                                                      +39 ${this.state.telefono}
+                                                    </span>
+                                                  </a>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="
+                                            line-height: 0%;
+                                            padding-bottom: 0px;
+                                          ">
+                                          <table class="ws-tpl-phone" cellpadding="0" cellspacing="0" style="
+                                              width: 100%;
+                                              line-height: 14px;
+                                              font-size: 12px;
+                                              font-family: Arial;
+                                            ">
+                                            <tbody>
+                                              <tr>
+                                                <td style="
+                                                    color-scheme: light only;
+                                                    font-family: Arial;
+                                                    font-size: 12px;
+                                                  ">
+                                                  <span class="ws-tpl-name" style="
+                                                      font-family: Arial;
+                                                      text-transform: initial;
+                                                      font-weight: bold;
+                                                      font-size: 11px;
+                                                    ">
+                                                    O:
+                                                  </span>
+                                                  <a href="tel:+39 055 97 53 445" target="_blank" style="
+                                                      color-scheme: light only;
+                                                      text-decoration: none;
+                                                      font-size: 11px;
+                                                      font-family: Arial;
+                                                    ">
+                                                    <span data-acs="phone" style="
+                                                        line-height: 1.2;
+                                                        color-scheme: light only;
+                                                        color: #212121;
+                                                        font-family: Arial;
+                                                        white-space: nowrap;
+                                                        font-size: 11px;
+                                                      ">
+                                                      +39 055 97 53 445
+                                                    </span>
+                                                  </a>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <table cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                      <tr>
+                                        <td style="
+                                            line-height: 0%;
+                                          ">
+                                          <table class="ws-tpl-website" cellpadding="0" cellspacing="0" style="
+                                              width: 100%;
+                                              line-height: 14px;
+                                              font-size: 12px;
+                                              font-family: Arial;
+                                            ">
+                                            <tbody>
+                                              <tr>
+                                                <td style="
+                                                    color-scheme: light only;
+                                                    font-family: Arial;
+                                                    font-size: 12px;
+                                                  ">
+                                                  <a href="http://www.mirror.it" target="_blank" style="
+                                                      color-scheme: light only;
+                                                      text-decoration: none;
+                                                      font-size: 11px;
+                                                      font-family: Arial;
+                                                    ">
+                                                    <span data-acs="website" style="
+                                                        line-height: 1.2;
+                                                        color-scheme: light only;
+                                                        color: #c30081;
+                                                        font-family: Arial;
+                                                        white-space: nowrap;
+                                                        font-size: 11px;
+                                                      ">
+                                                      www.mirror.it
+                                                    </span>
+                                                  </a>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding-top: 10px">
+                          <table class="ws-tpl-social" cellpadding="0" cellspacing="0" style="width: 100%">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <table border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                      <tr>
+                                        <td align="left" style="
+                                            padding-right: 6px;
+                                            text-align: center;
+                                            padding-top: 0;
+                                          ">
+                                          <a href="http://instagram.com/mirrordigitalagency" target="_blank" style="
+                                              font-size: 11px;
+                                              color: #444;
+                                              text-decoration: none;
+                                            ">
+                                            <img width="16" height="16" src="http://gest.mirrorprod.com/wp-content/uploads/2021/06/instagram-icon.png" style="float: left; border: none" border="0">
+                                          </a>
+                                        </td>
+                                        <td align="left" style="
+                                            padding-right: 6px;
+                                            text-align: center;
+                                            padding-top: 0;
+                                          ">
+                                          <a href="http://facebook.com/mirrordigitalagency" target="_blank" style="
+                                              font-size: 11px;
+                                              color: #444;
+                                              text-decoration: none;
+                                            ">
+                                            <img width="16" height="16" src="http://gest.mirrorprod.com/wp-content/uploads/2021/06/fb-icon.png" style="float: left; border: none" border="0">
+                                          </a>
+                                        </td>
+                                        <td align="left" style="
+                                            padding-right: 6px;
+                                            text-align: center;
+                                            padding-top: 0;
+                                          ">
+                                          <a href="http://vimeo.com/mirrordigitalagency" target="_blank" style="
+                                              font-size: 11px;
+                                              color: #444;
+                                              text-decoration: none;
+                                            ">
+                                            <img width="16" height="16" src="http://gest.mirrorprod.com/wp-content/uploads/2021/06/vimeo-icon.png" style="float: left; border: none" border="0">
+                                          </a>
+                                        </td>
+                                        <td align="left" style="
+                                            padding-right: 6px;
+                                            text-align: center;
+                                            padding-top: 0;
+                                          ">
+                                          <a href="https://www.linkedin.com/company/mirrordigitalagency" target="_blank" style="
+                                              font-size: 11px;
+                                              color: #444;
+                                              text-decoration: none;
+                                            ">
+                                            <img width="16" height="16" src="http://gest.mirrorprod.com/wp-content/uploads/2021/06/linkedin-icon.png" style="float: left; border: none" border="0">
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+              <tr>
+                <td style="line-height: 0"></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-top: 12px">
+          <div style="color: #999999; font-size: 9px; max-width: 950px;">Avviso di riservatezza: questo messaggio può contenere informazioni riservate. Se non sei il destinatario previsto, ti preghiamo di avvisare immediatamente il mittente tramite e-mail di risposta ed eliminare questo messaggio e gli eventuali allegati senza conservarne una copia. Qualsiasi utilizzo non autorizzato del contenuto di questo messaggio può costituire una violazione del vostro dovere di rispettare la riservatezza della corrispondenza tra altre persone, ai sensi dell'art. 616 cp, nonché violazione del D.lgs. n. 196/2003 (legge sulla privacy) e può esporre il responsabile a sanzioni civili e/o penali, e può costituire più grave reato.</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>`
   });
 
   render() {
