@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import MaskedInput from 'react-text-mask';
-import './App.css';
+import React, { Component } from "react";
+import MaskedInput from "react-text-mask";
+import "./App.css";
 
 class App extends Component {
   state = {
-    nome: 'Andrea Gherardi',
-    ruolo: 'Chief Technical Officer',
-    email: 'andrea.gherardi',
-    telefono: '328 88 76 938'
+    nome: "Andrea Gherardi",
+    ruolo: "Chief Technical Officer",
+    email: "andrea.gherardi",
+    telefono: "328 88 76 938",
   };
 
   copy = () => {
-    window.getSelection().selectAllChildren(document.querySelector('.Output'));
-    document.execCommand('copy');
+    window.getSelection().selectAllChildren(document.querySelector(".Output"));
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
-    alert('Copiato! Ora vai su Gmail, MA NON USARE CHROME!!!');
+    alert("Copiato! Ora vai su Gmail, MA NON USARE CHROME!!!");
   };
 
   step1 = () => (
@@ -47,16 +47,16 @@ class App extends Component {
             /\d/,
             /\d/,
             /\d/,
-            ' ',
+            " ",
             /\d/,
             /\d/,
-            ' ',
+            " ",
             /\d/,
             /\d/,
-            ' ',
+            " ",
             /\d/,
             /\d/,
-            /\d/
+            /\d/,
           ]}
           onChange={this.handleTelefonoChange}
           id="telefono"
@@ -72,19 +72,19 @@ class App extends Component {
     </div>
   );
 
-  handleNomeChange = e => {
+  handleNomeChange = (e) => {
     this.setState({ nome: e.target.value });
   };
 
-  handleRuoloChange = e => {
+  handleRuoloChange = (e) => {
     this.setState({ ruolo: e.target.value });
   };
 
-  handleEmailChange = e => {
+  handleEmailChange = (e) => {
     this.setState({ email: e.target.value });
   };
 
-  handleTelefonoChange = e => {
+  handleTelefonoChange = (e) => {
     this.setState({ telefono: e.target.value });
   };
 
@@ -198,7 +198,9 @@ class App extends Component {
                                                     ">
                                                     M:
                                                   </span>
-                                                  <a href="tel:+39${this.state.telefono}" target="_blank" style="
+                                                  <a href="tel:+39${
+                                                    this.state.telefono
+                                                  }" target="_blank" style="
                                                       color-scheme: light only;
                                                       text-decoration: none;
                                                       font-size: 12px;
@@ -413,11 +415,11 @@ class App extends Component {
       </tr>
       <tr>
         <td style="padding-top: 12px">
-          <div style="color: #999999; font-size: 9px; max-width: 950px;">Avviso di riservatezza: questo messaggio può contenere informazioni riservate. Se non sei il destinatario previsto, ti preghiamo di avvisare immediatamente il mittente tramite e-mail di risposta ed eliminare questo messaggio e gli eventuali allegati senza conservarne una copia. Qualsiasi utilizzo non autorizzato del contenuto di questo messaggio può costituire una violazione del vostro dovere di rispettare la riservatezza della corrispondenza tra altre persone, ai sensi dell'art. 616 cp, nonché violazione del D.lgs. n. 196/2003 (legge sulla privacy) e può esporre il responsabile a sanzioni civili e/o penali, e può costituire più grave reato.</div>
+          <div style="color: #999999; font-size: 9px; max-width: 950px;">Avviso di riservatezza: questo messaggio può contenere informazioni riservate. Se non sei il destinatario previsto, ti preghiamo di avvisare immediatamente il mittente tramite e-mail di risposta ed eliminare questo messaggio e gli eventuali allegati senza conservarne una copia. Qualsiasi utilizzo non autorizzato del contenuto di questo messaggio può costituire una violazione del vostro dovere di rispettare la riservatezza della corrispondenza tra altre persone, ai sensi dell'art. 616 c.p., nonché violazione del D.lgs. n. 196/2003 (Codice in materia di protezione dei dati personali) e può esporre il responsabile a sanzioni civili e/o penali, e può costituire più grave reato.</div>
         </td>
       </tr>
     </tbody>
-  </table>`
+  </table>`,
   });
 
   render() {
